@@ -24,7 +24,7 @@
       {
         "language": "twig",
         "path": "./snippets/snippets-twig.code-snippets"
-      },
+      }
     ]
   }
 }
