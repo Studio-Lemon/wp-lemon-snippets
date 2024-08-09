@@ -1,0 +1,33 @@
+{
+   "Bootstrap media query - up": {
+     "scope": "scss",
+     "prefix": ["media-query-up", "wp-lemon-media-query-up"],
+     "body": [
+       "@include media-breakpoint-up(${1:breakpoint}){",
+       "    ${2:continue}",
+       "}"
+     ],
+     "description": "Bootstrap media query"
+   },
+   "Bootstrap media query - down": {
+     "scope": "scss",
+     "prefix": ["media-query-down", "wp-lemon-media-query-down"],
+     "body": [
+       "@include media-breakpoint-down(${1:breakpoint}){",
+       "  ${2:continue}",
+       "}"
+     ],
+     "description": "Bootstrap media query"
+   },
+   "Css comment": {
+     "scope": "scss",
+     "prefix": ["comment", "wp-lemon-comment"],
+     "body": [
+       "// ==========================================================================",
+       "// ${1:Comment}",
+       "// ==========================================================================",
+       "${2:}"
+     ],
+     "description": "Comment block"
+   },
+}

@@ -24,6 +24,10 @@
       {
         "language": "twig",
         "path": "./snippets/snippets-twig.code-snippets"
+      },
+      {
+        "language": "scss",
+        "path": "./snippets/snippets-scss.code-snippets"
       }
     ]
   }
