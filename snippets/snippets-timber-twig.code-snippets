@@ -1,0 +1,47 @@
+{	"twig picture": {
+   "scope": "twig",
+   "prefix": "picture",
+   "body": [
+     "{% import 'macros/media.twig' as media %}",
+     "{{",
+     "    media.picture(",
+     "        ${1:image_id},",
+     "        {",
+     "            picture_class: '${2:class}',",
+     "            image_class: '',",
+     "            image_size: 'large',",
+     "            image_sizes: null,",
+     "            loading: 'lazy',",
+     "        }",
+     "    )",
+     "}}"
+   ],
+   "description": "twig picture element"
+ },
+ "twig todo": {
+   "scope": "twig",
+   "prefix": ["todo", "wp-lemon-todo"],
+   "body": [
+     "{% import 'macros/helpers.twig' as helpers %}",
+     "{{ helpers.todo(${1:link}, '${2:message}') }}"
+   ],
+   "description": "twig todo element"
+ },
+ "translate": {
+   "scope": "twig",
+   "prefix": ["__", "wp-lemon-__", "translate", "wp-lemon-translate"],
+   "body": [
+     "{{ __('${1:string}', '${2:wp-lemon-child}') }}"
+   ],
+   "description": "twig picture element"
+ },
+ "twig animation": {
+   "scope": "twig",
+   "prefix": ["animation", "wp-lemon-animation", "aos-animation", "wp-lemon-aos-animation"],
+   "body": [
+     "{% import 'macros/helpers.twig' as helpers %}",
+     "{{ helpers.animation(is_preview, '${1:card}', ${2:delay}) }}"
+   ],
+   "description": "twig picture element"
+ },
+}

@@ -30,6 +30,10 @@
         "path": "./snippets/snippets-twig.code-snippets"
       },
       {
+        "language": "twig",
+        "path": "./snippets/snippets-timber-twig.code-snippets"
+      },
+      {
         "language": "scss",
         "path": "./snippets/snippets-scss.code-snippets"
       },
