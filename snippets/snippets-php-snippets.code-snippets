@@ -1,33 +1,57 @@
 {
-	 "Add a Timber classmap": {
-		"prefix": ["timberPostClassmap", "wp-lemon-timberPostClassmap"],
+	"Add a Timber classmap": {
+		"prefix": [
+			"timberPostClassmap",
+			"wp-lemon-timberPostClassmap"
+		],
 		"scope": "php",
 		"body": [
-		  "",
-		  "add_filter('timber/post/classmap', function (\\$classmap) {",
-		  "   \\$custom_classmap = [",
-		  "      '${1:post_type_name}'    => ${2:object_name}::class,",
-		  "   ];",
-		  "",
-		  "   return array_merge(\\$classmap, \\$custom_classmap);",
-		  "});",
-		  ""
+			"",
+			"add_filter('timber/post/classmap', function (\\$classmap) {",
+			"   \\$custom_classmap = [",
+			"      '${1:post_type_name}'    => ${2:object_name}::class,",
+			"   ];",
+			"",
+			"   return array_merge(\\$classmap, \\$custom_classmap);",
+			"});",
+			""
 		],
 		"description": "Add the classmap"
-	 },
+	},
 	"wp-lemon-render-action": {
-	"prefix": ["render-action", "wp-lemon-render-action"],
-	"scope": "php",
-	"body": [
-		"function render_${1:action_name}()",
-		"{",
-		"\\$context = Timber::context();",
-		"",
-		"Timber::render('${3:twig_file}.twig', \\$context);",
-		"}",
-		"add_action('wp-lemon/action/${2:hook}', __NAMESPACE__ . '\\\\render_${1:action_name}',);",
-		""
-	],
-	"description": "Add a hook to render a twig file"
+		"prefix": [
+			"render-action",
+			"wp-lemon-render-action"
+		],
+		"scope": "php",
+		"body": [
+			"function render_${1:action_name}()",
+			"{",
+			"\\$context = Timber::context();",
+			"",
+			"Timber::render('${3:twig_file}.twig', \\$context);",
+			"}",
+			"add_action('wp-lemon/action/${2:hook}', __NAMESPACE__ . '\\\\render_${1:action_name}',);",
+			""
+		],
+		"description": "Add a hook to render a twig file"
+	},
+	"Block fields repeater": {
+		"prefix": "wp-lemon-block-fields-repeater",
+		"body": [
+			"\t\t\\$this->registered_fields",
+			"\t\t\t->addRepeater('repeater', [",
+			"\t\t\t\t'label' => __('Slides', 'wp-lemon-child'),",
+			"\t\t\t\t'min' => 4,",
+			"\t\t\t\t'layout' => 'block',",
+			"\t\t\t])",
+			"\t\t\t->addImage('image', [",
+			"\t\t\t\t'label' => __('Image', 'wp-lemon-child'),,",
+			"\t\t\t\t'return_format' => 'id',",
+			"\t\t\t])",
+			"",
+			"\t\t\t->endRepeater();"
+		],
+		"description": "Block fields repeater"
 	}
 }
