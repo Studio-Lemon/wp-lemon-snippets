@@ -1,20 +1,37 @@
 {
   "name": "wp-lemon-snippets",
   "displayName": "wp-lemon-snippets",
+  "icon": "wp-lemon-snippets-icon.png",
+  "publisher": "StudioLemon",
   "description": "Code snippets to work with the wp-lemon WordPress theme",
-  "author": "Studio Lemon <erik@studiolemon.nl>, Mees Moons <mees@studiolemon.nl>",
+  "author": "Studio Lemon <erik@studiolemon.nl>",
   "homepage": "https://studio-lemon.github.io/wp-lemon-docs/",
   "repository": {
     "type": "git",
     "url": "git@github.com:Studio-Lemon/wp-lemon-snippets.git"
-},
-  "version": "0.0.1",
+  },
+  "bugs": {
+    "url": "https://github.com/Studio-Lemon/wp-lemon-snippets/issues"
+  },
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.92.0"
   },
   "categories": [
     "Snippets"
   ],
+  "keywords": [
+    "Snippets",
+    "Timber",
+    "Twig",
+    "wp-lemon",
+    "studio lemon",
+    "Wordpress",
+    "WP"
+  ],
+  "scripts": {
+    "deploy": "vsce publish"
+  },
   "contributes": {
     "snippets": [
       {
@@ -46,5 +63,8 @@
         "path": "./snippets/snippets-php-files.code-snippets"
       }
     ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^2.31.1"
   }
 }
