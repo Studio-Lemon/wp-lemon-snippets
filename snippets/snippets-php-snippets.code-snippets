@@ -1,0 +1,33 @@
+{
+	 "Add a Timber classmap": {
+		"prefix": ["timberPostClassmap", "wp-lemon-timberPostClassmap"],
+		"scope": "php",
+		"body": [
+		  "",
+		  "add_filter('timber/post/classmap', function (\\$classmap) {",
+		  "   \\$custom_classmap = [",
+		  "      '${1:post_type_name}'    => ${2:object_name}::class,",
+		  "   ];",
+		  "",
+		  "   return array_merge(\\$classmap, \\$custom_classmap);",
+		  "});",
+		  ""
+		],
+		"description": "Add the classmap"
+	 },
+	"wp-lemon-render-action": {
+	"prefix": ["render-action", "wp-lemon-render-action"],
+	"scope": "php",
+	"body": [
+		"function render_${1:action_name}()",
+		"{",
+		"\\$context = Timber::context();",
+		"",
+		"Timber::render('${3:twig_file}.twig', \\$context);",
+		"}",
+		"add_action('wp-lemon/action/${2:hook}', __NAMESPACE__ . '\\\\render_${1:action_name}',);",
+		""
+	],
+	"description": "Add a hook to render a twig file"
+	}
+}

@@ -19,7 +19,11 @@
     "snippets": [
       {
         "language": "php",
-        "path": "./snippets/snippets-php.code-snippets"
+        "path": "./snippets/snippets-php-files.code-snippets"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/snippets-php-snippets.code-snippets"
       },
       {
         "language": "twig",
@@ -32,6 +36,10 @@
       {
         "language": "javascript",
         "path": "./snippets/snippets-javascript.code-snippets"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/snippets-php-files.code-snippets"
       }
     ]
   }
