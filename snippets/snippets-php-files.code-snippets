@@ -72,4 +72,42 @@
 		],
 		"description": "create a extended post object"
 	},
+	"Create customizer file": {
+		"prefix": [
+			"wp-lemon-customizer-file",
+			"custimzer-file"
+		],
+		"body": [
+			"<?php",
+			"",
+			"/**",
+			" * Customizer",
+			" *",
+			" * @package WordPress",
+			" * @subpackage WP_Lemon\\Child",
+			" */",
+			"",
+			"namespace WP_Lemon\\Child\\Models;",
+			"",
+			"/**",
+			" * Register customizer fields via native api.",
+			" *",
+			" * @param object \\$wp_customize  The cutomizer object we are going to extend.",
+			" * @return void",
+			" */",
+			"function customize_register(\\$wp_customize)",
+			"{",
+			"   \\$wp_customize->add_section(",
+			"\t  '${1:project slug}',",
+			"\t  [",
+			"\t\t 'title'       => esc_attr_x('${2:project name}', 'Backend - Customizer section title', 'wp-lemon-child'),",
+			"\t\t 'priority'    => 50,",
+			"\t\t 'description' => esc_attr_x('${3:project description}', 'Backend - Customizer section description', 'wp-lemon-child'),",
+			"\t  ]",
+			"   );",
+			"}",
+			"add_action('customize_register', __NAMESPACE__ . '\\\\customize_register');"
+		],
+		"description": "Generates a full customizer file."
+	}
 }

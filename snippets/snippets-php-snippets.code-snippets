@@ -53,5 +53,5 @@
 			"\t\t\t->endRepeater();"
 		],
 		"description": "Block fields repeater"
-	}
+	},
 }
