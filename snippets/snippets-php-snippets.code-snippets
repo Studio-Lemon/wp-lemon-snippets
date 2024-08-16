@@ -53,5 +53,27 @@
 			"\t\t\t->endRepeater();"
 		],
 		"description": "Block fields repeater"
-	}
+	},
+	"customizerfields": {
+    "prefix": "customizerfields",
+    "body": [
+        "   \\$wp_customize->add_setting(",
+        "\t  'disclaimer',",
+        "\t  [",
+        "\t\t 'validate_callback' => '',",
+        "\t\t 'sanitize_callback' => 'wp_kses_post',",
+        "\t  ]",
+        "   );",
+        "",
+        "   \\$wp_customize->add_control(",
+        "\t  'disclaimer',",
+        "\t  [",
+        "\t\t 'label'       => _x('Disclaimer footer text', 'Backend - Customizer field label', 'wp-lemon-child'),",
+        "\t\t 'section'     => 'uibt',",
+        "\t\t 'type'        => 'textarea',",
+        "\t  ]",
+        "   );"
+    ],
+    "description": "Add setting and control function for customizer fields"
+}
 }
