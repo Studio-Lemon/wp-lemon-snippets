@@ -1,4 +1,25 @@
 {
+  "Create Functional React Component": {
+    "scope": "twig",
+    "prefix": [
+      "single-template",
+      "wp-lemon-single-template"
+    ],
+    "body": [
+      "{% extends 'layouts/app.twig' %}",
+      "{% block content %}",
+      "    <article class=\"entry\">",
+      "        {% do action('wp-lemon/action/entry/before') %}",
+      "        {% do action('wp-lemon/action/entry/content/before') %}",
+      "        {{ post.content }}",
+      "        {% do action('wp-lemon/action/entry/content/after') %}",
+      "        {% do action('wp-lemon/action/entry/after') %}",
+      "    </article>",
+      "{% endblock %}",
+      ""
+    ],
+    "description": "Create a single post template"
+  },
   "twig picture": {
     "scope": "twig",
     "prefix": "picture",
