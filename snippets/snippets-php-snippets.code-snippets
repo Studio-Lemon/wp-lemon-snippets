@@ -1,4 +1,17 @@
 {
+	"define home and site url": {
+		"prefix": [
+			"home-url",
+			"site-url",
+			"wp-lemon-define-home-url",
+			"wp-lemon-define-site-url",
+		],
+		"body": [
+			"define('WP_HOME', 'http://${1:site_name}.local');",
+			"define('WP_SITEURL', 'http://${1:site_name}.local');"
+		],
+		"description": "define home and site url"
+	},
 	"Add a Timber classmap": {
 		"prefix": [
 			"timberPostClassmap",
