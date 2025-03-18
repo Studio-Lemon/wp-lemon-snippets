@@ -38,6 +38,30 @@
 		],
 		"description": "acfBuilder Config"
 	},
+	"Create a pattern for a specific post type": {
+		"prefix": [
+			"block-pattern-for-post-type",
+			"wp-lemon-block-pattern-for-post-type"
+		],
+		"scope": "php, html",
+		"body": [
+			"<?php",
+			"",
+			"/**",
+			" * Title: ${1:Pattern title}",
+			" * Slug: ${2:Theme slug}/${3:Pattern Slug}",
+			" * Categories: posts",
+			" * Description: A selection of blocks for a parent solution page.",
+			" * Post Types: ${4:Post Type}",
+			" * Block Types: core/post-content",
+			" *",
+			" * @package WordPress",
+			" * @subpackage WP_Lemon\\Child",
+			" */",
+			"",
+			"?>"
+		]
+	},
 	"create an extended Timber Post Class": {
 		"prefix": [
 			"timberPostObject",
