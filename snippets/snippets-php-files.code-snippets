@@ -81,7 +81,7 @@
 			"",
 			"namespace WP_Lemon\\Child\\Classes;",
 			"",
-			"use Timber\\Post;",
+			"use WP_Lemon\\Classes\\LemonPost as Post;",
 			"use Timber\\Timber;",
 			"",
 			"class ${1:post_type_name} extends Post",
