@@ -20,7 +20,7 @@
 			"use StoutLogic\\AcfBuilder\\FieldsBuilder;",
 			"",
 			"add_action(",
-			"   'acf/init',",
+			"   'acf/include_fields',",
 			"   function () {",
 			"",
 			"      \\$fields_${1:post_type_name} = new FieldsBuilder('cpt_${1:post_type_name}', [",
