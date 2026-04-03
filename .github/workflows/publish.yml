@@ -1,23 +1,23 @@
 name: Distribute extension
 on:
-    workflow_dispatch:
-    release:
-        types: [published]
+  workflow_dispatch:
+  release:
+    types: [published]
 
 jobs:
-   build:
-       runs-on: ubuntu-latest
-       name: Deploy to satispress
-       steps:
-          - name: Checkout code
-            uses: actions/checkout@v4
-          - name: Install Node.js
-            uses: actions/setup-node@v4
-            with:
-              node-version: 18.x
-          - name: Install dependencies
-            run: npm install
-          - name: Publish
-            run: npm run deploy
-            env:
-              VSCE_PAT: ${{ secrets.VSCE_PAT }}
+  build:
+    runs-on: ubuntu-latest
+    name: Distribute extension
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Install dependencies
+        run: npm install
+      - name: Publish
+        run: npm run deploy
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
