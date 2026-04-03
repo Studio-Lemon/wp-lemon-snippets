@@ -121,7 +121,7 @@
 			"/**",
 			" * Register customizer fields via native api.",
 			" *",
-			" * @param object \\$wp_customize  The cutomizer object we are going to extend.",
+			" * @param object \\$wp_customize  The customizer object we are going to extend.",
 			" * @return void",
 			" */",
 			"function customize_register(\\$wp_customize)",
