@@ -60,6 +60,18 @@ Generates a full customizer file with section registration.
 **Description:** WordPress page template  
 Creates a complete page template file with Timber integration.
 
+#### Custom Post Type
+
+**Prefix:** `wp-lemon-custom-post-type`, `custom-post-type`  
+**Description:** Generate a custom post type function with full configuration  
+Creates a complete custom post type registration function with labels, args, and configuration for support, taxonomies, rewrites, and REST API.
+
+#### Custom Taxonomy
+
+**Prefix:** `wp-lemon-custom-taxonomy`, `custom-taxonomy`  
+**Description:** Generate a custom taxonomy function with full configuration  
+Creates a complete custom taxonomy registration function with comprehensive labels, args, and settings for hierarchical organization and REST API support.
+
 ---
 
 ### PHP Code Snippets
