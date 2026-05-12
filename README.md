@@ -8,10 +8,10 @@ you can find the extension on the [Visual Studio Code Marketplace](https://marke
 
 This extension provides snippets for the following languages:
 
-- PHP
-- Twig
-- JavaScript
-- SCSS
+- [PHP](#php-file-templates)
+- [Twig](#timbertwig-snippets)
+- [JavaScript](#javascript-snippets)
+- [SCSS](#scss-snippets)
 
 ## Available Snippets
 
