@@ -1,5 +1,7 @@
+.github/**
 .vscode/**
 .vscode-test/**
 .gitignore
 vsc-extension-quickstart.md
 workspace.code-workspace
+changelog.md
