@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/Studio-Lemon/wp-lemon-snippets/issues"
   },
-  "version": "1.4.0",
+  "version": "1.4.1",
   "engines": {
     "vscode": "^1.114.0"
   },
@@ -30,7 +30,9 @@
     "WP"
   ],
   "scripts": {
-    "deploy": "vsce publish"
+    "deploy": "vsce publish",
+    "generate-changelog": "yarn run git-cliff --unreleased --include-path=./ --prepend ./CHANGELOG.md --tag $(cat package.json | jq -r '.version')",
+    "release": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag $PACKAGE_VERSION && git push --tags && gh release create $PACKAGE_VERSION"
   },
   "contributes": {
     "snippets": [
@@ -65,6 +67,7 @@
     ]
   },
   "devDependencies": {
-    "@vscode/vsce": "^3.7.0"
+    "@vscode/vsce": "^3.9.0",
+    "git-cliff": "^2.11.0"
   }
 }
