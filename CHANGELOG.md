@@ -1,4 +1,11 @@
 
+## 1.4.2 - 26 May 2026
+
+### 🐛 Bug Fixes
+
+- *(snippets)* Update scope for Twig snippets from 'text.html.twig' to 'twig'
+
+
 ## 1.4.1 - 12 May 2026
 
 ### 🐛 Bug Fixes

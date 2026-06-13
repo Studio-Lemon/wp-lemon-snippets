@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/Studio-Lemon/wp-lemon-snippets/issues"
   },
-  "version": "1.4.1",
+  "version": "1.4.2",
   "engines": {
     "vscode": "^1.114.0"
   },
